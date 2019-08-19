@@ -15,7 +15,7 @@ connection.connect(function(err) {
   console.log("Connected as id " + connection.threadId);
 });
 
-connection.query("SELECT * FROM presidential_election_by_county_ak", function(
+connection.query("SELECT * FROM presidential_election_by_county_tx", function(
   error,
   results,
   fields

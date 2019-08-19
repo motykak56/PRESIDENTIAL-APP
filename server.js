@@ -2,9 +2,9 @@ var http = require("http");
 
 var fs = require("fs");
 
-// Set our port to 8080
+// Set our port to 3060
 
-var PORT = 8080;
+var PORT = 3060;
 
 // Create our server
 
@@ -15,7 +15,7 @@ var server = http.createServer(handleRequest);
 function handleRequest(req, res) {
   // Here we use the fs package to read our index.html file
 
-  fs.readFile(__dirname + "/index.html", function(err, data) {
+  fs.readFile("public" + "/index.html", function(err, data) {
     if (err) throw err;
 
     // We then respond to the client with the HTML page by specifically telling the browser that we are delivering
@@ -31,5 +31,5 @@ function handleRequest(req, res) {
 // Starts our server
 
 server.listen(PORT, function() {
-  console.log("Server is listening on PORT: " + PORT);
+  console.log("Server is listening in http://localhost:" + PORT);
 });
